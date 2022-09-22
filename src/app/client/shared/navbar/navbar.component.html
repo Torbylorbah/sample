@@ -1,0 +1,18 @@
+<div class="navbar px-10 py-5 hidden md:block">
+    <div class="navbar flex flex-col justify-between items-center md:flex-row">
+        <div routerLink="/" class="logo font-bold text-4xl cursor-pointer ">
+            <span class="text-6xl light">S</span>ample
+        </div>
+        <div class="d-nav font-bold text-lg flex flex-col gap-6 md:flex-row">
+            <a routerLink="/client" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+            true}">Home</a>
+            <a routerLink="/client/about" class="" routerLinkActive="active-link">About</a>
+            <a routerLink="/client/portfolio" class="" routerLinkActive="active-link">Portfolio</a>
+            <a routerLink="/client/services" class="" routerLinkActive="active-link">Services</a>
+        </div>
+        <div class="flex justify-between gap-4">
+            <a routerLink="#" class="bttn font-bold" (click)="openSignUp()">SignUp</a>
+            <a routerLink="#" class="bttn font-bold" (click)="openModal()">LogIn</a>
+        </div>
+    </div>
+</div>

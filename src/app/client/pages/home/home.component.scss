@@ -1,0 +1,24 @@
+body{
+    color: white;
+}
+
+.sm-hover:hover{
+  background: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  transform: translateY(-8px);
+  opacity: 0.9;
+  transition: .5s ease-out;
+}
+.case-box{
+  overflow: hidden;
+}
+.case-box-text{
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+}
+.swiper {
+  width: 600px;
+  height: 300px;
+}

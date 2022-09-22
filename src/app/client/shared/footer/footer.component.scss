@@ -1,0 +1,10 @@
+hr{
+    border-top: 4px solid rgb(105,1,1);
+}
+
+@media only screen and (max-width:678px){
+    .footer-container{
+        justify-items: unset;
+        justify-content: unset;
+    }
+}

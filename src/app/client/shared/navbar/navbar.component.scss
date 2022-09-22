@@ -1,0 +1,15 @@
+.active{
+    border-bottom: 3px solid rgb(105,1,1);
+}
+.active-link{
+    border-bottom: 3px solid rgb(105,1,1);
+}
+.d-nav a:hover{
+    color: rgb(105,1,1);
+}
+.navbar{
+    background: #f4efef;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}

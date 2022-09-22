@@ -1,1 +1,131 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$sample-primary: mat.define-palette(mat.$indigo-palette);
+$sample-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$sample-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$sample-theme: mat.define-light-theme((
+  color: (
+    primary: $sample-primary,
+    accent: $sample-accent,
+    warn: $sample-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($sample-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    overflow-x: hidden;
+}
+.dark{
+  color:rgb(56,0,0) ;
+}
+.light{
+  color: rgb(213,2,0);
+}
+.medium{
+  color: rgb(105,1,1);
+}
+.dark-bg{
+  background-color: rgb(56,0,0);
+}
+.medium-bg{
+  background-color: rgb(105,1,1);
+}
+.light-bg{
+  background-color: rgb(213,2,0);
+}
+.box-shadow{
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+.bttn{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(213,2,0);
+    text-align: center;
+    outline: none;
+}
+.bttn:hover{
+    background: rgb(105,1,1);
+    font-weight: 600;
+}
+.other-header{
+    background-image: url(assets/images/las-vegas-residential-house-6.jpg);
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image-container{
+    height: fit-content;
+}
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+ .image-container .middle {
+    transition: .5s ease-in;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .image-container:hover{
+    background: black;
+    opacity: 1;
+    transition: .5s ease-out;
+  }
+  .image-container:hover .image {
+    opacity: 0.4;
+  }
+  
+  .image-container:hover .middle {
+    opacity: 1;
+  }
+  
+  .image-container .text {
+    font-size: 16px;
+    color: white;
+  }
+  .parallax-2{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
